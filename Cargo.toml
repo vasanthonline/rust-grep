@@ -1,5 +1,5 @@
 [package]
-name = "grep"
+name = "rustgrep"
 version = "0.1.0"
 edition = "2018"
 description = "A CLI utility to grep for keywords in a file"
