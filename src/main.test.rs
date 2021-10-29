@@ -1,4 +1,6 @@
 #[test]
-fn check_answer_validity() {
-    assert_eq!(43, 42);
+fn should_find_matches() {
+    let mut result = Vec::new();
+    grep::find_matches("lorem ipsum\ndolor sit amet", "lorem", &mut result);
+    assert_eq!(result, b"lorem ipsum\n");
 }

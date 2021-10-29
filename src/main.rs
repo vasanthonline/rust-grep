@@ -19,13 +19,8 @@ fn main() {
     let reader = BufReader::new(file);
     for line in reader.lines() {
         match line {
-            Ok(line) => {
-                if line.contains(&args.pattern) {
-                    println!("{}", line)
-                }
-            },
+            Ok(line) => grep::find_matches(&line, &args.pattern, &mut std::io::stdout()),
             Err(e) => println!("Error parsing line: {:?}", e),
         }
     }
 }
-
